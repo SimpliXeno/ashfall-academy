@@ -96,10 +96,17 @@
   }
   function completeSeal() {
     pointerHeld=false;completed=true;cancelAnimationFrame(rafId);
-    seal.classList.remove("is-holding");seal.classList.add("is-broken");
-    seal.disabled=true;record.hidden=false;
-    instruction.textContent="THE SEAL HAS BEEN BROKEN.";
-    seal.setAttribute("aria-label","The sealed record has been broken");
+    seal.classList.remove("is-holding");seal.classList.add("chains-torn");
+    seal.disabled=true;
+    instruction.textContent="THE CHAINS HAVE BEEN TORN APART.";
+    seal.setAttribute("aria-label","The chains have been torn apart; Eshrael's tarot is revealed");
+    window.setTimeout(()=>{
+      seal.classList.add("seal-fading");
+      record.hidden=false;
+      requestAnimationFrame(()=>record.classList.add("is-revealed"));
+      instruction.textContent="THE SEALED RECORD IS OPEN.";
+      $("#scourge-quote").textContent="A name once buried beneath the weight of Heaven.";
+    },720);
   }
   seal.addEventListener("pointerdown",startHold);
   seal.addEventListener("pointerup",cancelHold);
@@ -117,7 +124,7 @@
       let last=performance.now(), elapsed=0;
       function tick(now){
         elapsed+=(now-last);last=now;
-        if(elapsed>=1100 && remaining>0){remaining--;count.textContent=String(remaining).padStart(2,"0");elapsed=0;}
+        if(elapsed>=60 && remaining>0){remaining--;count.textContent=String(remaining).padStart(2,"0");elapsed=0;}
         if(remaining===0){countdown.classList.add("gates-open");caption.textContent="THE GATES ARE OPEN";return;}
         requestAnimationFrame(tick);
       }
