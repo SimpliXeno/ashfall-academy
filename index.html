@@ -146,7 +146,7 @@
     <section class="cycle-section section-wrap" id="cycle">
       <div class="section-kicker">VI · THE CRUSADE CYCLE</div>
       <div class="cycle-heading"><div><h2>NINETY DAYS<br>UNTIL <em>DESCENT.</em></h2><p>Every three months, the Gates open. Every return leaves something behind.</p></div>
-        <div class="gate-countdown" id="gate-countdown" aria-label="Ceremonial countdown to the opening of the Gates"><div class="gate-arch"><span class="gate-glow"></span><strong id="count-number">90</strong><small>SECONDS</small></div><span class="count-caption" id="count-caption">THE GATES REMAIN SEALED</span></div>
+        <div class="gate-countdown" id="gate-countdown" aria-label="Ceremonial countdown to the opening of the Gates"><div class="gate-arch"><span class="gate-glow"></span><strong id="count-number">90</strong><small>DAYS</small></div><span class="count-caption" id="count-caption">THE GATES REMAIN SEALED</span></div>
       </div>
       <div class="cycle-track">
         <article class="cycle-phase"><span class="phase-number">01</span><div class="phase-icon">⌁</div><div class="phase-copy"><h3>PREPARATION</h3><p>Students spend their time within the Academy training to grow stronger, learning to best demons and building the teams they will trust with their lives.</p><small>THE DAYS BEFORE DESCENT</small></div></article>
@@ -162,21 +162,38 @@
       <div class="scourge-content">
         <div class="section-kicker red-kicker">VII · THE LAST JUDGMENT</div>
         <div class="scourge-seal-wrap">
-          <button class="scourge-seal" id="scourge-seal" aria-label="Press and hold to break the sealed record" aria-describedby="seal-instruction">
+          <button class="scourge-seal" id="scourge-seal" aria-label="Press and hold to tear apart the chains binding the sealed record" aria-describedby="seal-instruction">
             <span class="seal-ring ring-one"></span><span class="seal-ring ring-two"></span><span class="seal-ring ring-three"></span>
-            <span class="seal-glyph">✦</span><span class="seal-crack crack-one"></span><span class="seal-crack crack-two"></span><span class="seal-crack crack-three"></span><span class="seal-progress"></span>
+            <span class="seal-glyph">✦</span>
+            <span class="seal-chain chain-north"></span><span class="seal-chain chain-south"></span>
+            <span class="seal-chain chain-east"></span><span class="seal-chain chain-west"></span>
+            <span class="seal-progress"></span>
           </button>
-          <p id="seal-instruction" class="seal-instruction">PRESS AND HOLD TO BREAK THE SEAL</p>
+          <p id="seal-instruction" class="seal-instruction">PRESS AND HOLD — BREAK THE CHAINS</p>
         </div>
-        <p class="scourge-pretitle">A RECORD STRUCK FROM THE ARCHIVES</p>
-        <h2>THE <em>UNNAMED</em></h2>
-        <p class="scourge-quote">“Some truths are sealed for the protection of all.”</p>
-        <div class="sealed-record" id="scourge-record" hidden aria-live="polite">
-          <div class="record-label">FRAGMENT OF A SEALED RECORD · SUBJECT UNIDENTIFIED</div>
-          <div class="unknown-portrait"><span>✦</span><small>PORTRAIT UNRECORDED</small></div>
-          <div class="record-stats"><span>BLOOD RANK<b>IX</b></span><span>POTENTIAL<b>V</b></span><span>CORE ASPECT<b>TOTALITY</b></span></div>
-          <p class="record-warning">NO FURTHER DESCRIPTION AVAILABLE.</p>
+        <div class="scourge-tarot-stage" id="scourge-record" hidden aria-live="polite">
+          <div class="scourge-tarot-inner">
+            <div class="scourge-tarot-face scourge-tarot-back">
+              <span class="tarot-back-sigil">✦</span><span class="tarot-back-caption">THE SEALED ARCHIVE</span>
+            </div>
+            <div class="scourge-tarot-face scourge-tarot-front">
+              <div class="scourge-tarot-ornament">✧ · ✦ · ✧</div>
+              <div class="scourge-portrait">
+                <span class="scourge-halo">◌</span><span class="scourge-wing wing-left">⌁</span><span class="scourge-wing wing-right">⌁</span>
+                <span class="scourge-portrait-mark">IX</span>
+              </div>
+              <div class="scourge-card-copy">
+                <div class="scourge-card-kicker">FALLEN JUDGEMENT</div>
+                <h2>THE SCOURGE</h2>
+                <h3>ESHRAEL</h3>
+                <div class="scourge-card-rule"></div>
+                <p>BLOOD RANK IX <span>│</span> POTENTIAL V</p>
+              </div>
+              <div class="scourge-tarot-ornament bottom">✧ · ✦ · ✧</div>
+            </div>
+          </div>
         </div>
+        <p class="scourge-quote" id="scourge-quote">“Some truths are sealed for the protection of all.”</p>
       </div>
       <footer class="site-footer"><span>ASHFALL ACADEMY</span><span>RECLAIM WHAT WAS LOST.</span><a href="#top">RETURN TO THE SURFACE ↑</a></footer>
     </section>
