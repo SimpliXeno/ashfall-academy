@@ -138,6 +138,7 @@
   function completeSeal(){
     pointerHeld=false;completed=true;cancelAnimationFrame(rafId);
     seal.classList.remove("is-holding");
+    seal.classList.add("seal-cracked");
     judgement.classList.add("bindings-broken","radiance-burst","flash-release");
     playSealBreak();
     seal.disabled=true;
