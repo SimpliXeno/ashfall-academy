@@ -159,21 +159,20 @@
 
     <section class="scourge-section" id="scourge">
       <div class="scourge-backdrop"></div>
-      <div class="judgement-bindings" id="judgement-bindings" aria-hidden="true">
-        <span class="binding-chain chain-top"></span><span class="binding-chain chain-bottom"></span>
-        <span class="binding-chain chain-left"></span><span class="binding-chain chain-right"></span>
-      </div>
       <div class="scourge-content">
         <div class="section-kicker red-kicker">VII · THE LAST JUDGMENT</div>
-        <div class="scourge-seal-wrap">
-          <button class="scourge-seal" id="scourge-seal" aria-label="Press and hold to break the bindings" aria-describedby="seal-instruction">
-            <span class="seal-ring ring-one"></span><span class="seal-ring ring-two"></span><span class="seal-ring ring-three"></span>
-            <span class="seal-glyph">✦</span>
-            <span class="seal-progress"></span>
-          </button>
-          <p id="seal-instruction" class="seal-instruction">PRESS AND HOLD — BREAK THE BINDINGS</p>
-        </div>
         <div class="scourge-tarot-stage is-bound" id="scourge-record" aria-live="polite">
+          <div class="card-bindings" id="card-bindings" aria-hidden="true">
+            <span class="binding-chain chain-diagonal-one"></span>
+            <span class="binding-chain chain-diagonal-two"></span>
+          </div>
+          <div class="scourge-seal-wrap">
+            <button class="scourge-seal" id="scourge-seal" aria-label="Hold to break the bindings" aria-describedby="seal-instruction">
+              <span class="seal-ring ring-one"></span><span class="seal-ring ring-two"></span><span class="seal-ring ring-three"></span>
+              <span class="seal-glyph">✦</span><span class="seal-progress"></span>
+            </button>
+            <p id="seal-instruction" class="seal-instruction">HOLD TO BREAK</p>
+          </div>        <div class="scourge-tarot-stage is-bound" id="scourge-record" aria-live="polite">
           <div class="scourge-tarot-inner">
             <div class="scourge-tarot-face scourge-tarot-back">
               <span class="tarot-back-sigil">✦</span><span class="tarot-back-caption">THE SEALED ARCHIVE</span>
