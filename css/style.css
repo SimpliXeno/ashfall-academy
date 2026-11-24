@@ -317,3 +317,12 @@
  .scourge-section:after{transition:none}
  .scourge-section.bindings-broken .binding-chain{animation-duration:.01ms}
 }
+
+
+/* Full-screen gold-white release flash, followed by the lingering radiance. */
+.scourge-flash{position:fixed;inset:0;z-index:19;pointer-events:none;opacity:0;background:radial-gradient(ellipse at 50% 50%,rgba(255,255,238,.98) 0%,rgba(255,231,177,.88) 18%,rgba(236,190,104,.46) 43%,rgba(191,142,61,.12) 70%,transparent 100%);mix-blend-mode:screen}
+.scourge-section.flash-release .scourge-flash{animation:scourgeWhiteFlash .82s cubic-bezier(.12,.72,.2,1) both}
+@keyframes scourgeWhiteFlash{0%{opacity:0;transform:scale(.22);filter:brightness(1)}13%{opacity:1;transform:scale(1.08);filter:brightness(2.4)}30%{opacity:.9;transform:scale(1.35);filter:brightness(1.7)}100%{opacity:0;transform:scale(1.9);filter:brightness(1)}}
+.scourge-section.radiance-burst .scourge-tarot-stage{animation:cardReleasePulse .9s ease-out both}
+@keyframes cardReleasePulse{0%{filter:brightness(.78) saturate(.8);box-shadow:0 0 0 rgba(255,226,165,0)}28%{filter:brightness(2.1) saturate(.45);box-shadow:0 0 90px 28px rgba(255,225,163,.8)}100%{filter:brightness(1.08) saturate(1);box-shadow:0 0 35px 8px rgba(255,215,145,.24)}}
+@media(prefers-reduced-motion:reduce){.scourge-section.flash-release .scourge-flash,.scourge-section.radiance-burst .scourge-tarot-stage{animation:none}}
