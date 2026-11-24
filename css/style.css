@@ -217,3 +217,8 @@
 .scourge-quote{position:absolute;left:24px;right:24px;bottom:78px;margin:0;padding:0}
 .scourge-section>.site-footer{position:absolute;left:0;right:0;bottom:0}
 @media(max-width:520px){.scourge-quote{left:14px;right:14px;bottom:82px;padding:0}}
+
+/* Binding rails run beyond the viewport so every chain is anchored at the section edges. */
+.chain-top,.chain-bottom{width:120vw;margin-left:-60vw}
+.chain-left,.chain-right{height:120vh;margin-top:-60vh}
+@media(max-width:760px){.chain-top,.chain-bottom{width:120vw;margin-left:-60vw}.chain-left,.chain-right{height:120vh;margin-top:-60vh}}
