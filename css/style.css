@@ -405,3 +405,82 @@
 .scourge-tarot-back{background:radial-gradient(ellipse at 50% 42%,rgba(190,190,198,.22),transparent 56%),linear-gradient(145deg,#302b20,#111210 28%,#211d19 72%,#100f0e)}
 .sealed-figure-img{position:absolute;z-index:1;left:50%;top:7%;transform:translateX(-50%);width:112%;height:78%;object-fit:contain;object-position:center center;opacity:.98;filter:drop-shadow(0 0 14px rgba(0,0,0,.45));pointer-events:none}
 @media(max-width:760px){.sealed-figure-img{top:8%;width:116%;height:76%}}
+
+
+/* Sovereign binding seal — faithful to the recording's oval pentagram medallion. */
+.scourge-seal{
+  width:clamp(104px,11vw,132px)!important;
+  height:clamp(138px,15vw,168px)!important;
+  border-radius:50%!important;
+  border:0!important;
+  padding:0!important;
+  background:radial-gradient(ellipse,rgba(12,12,13,.96) 0 58%,rgba(6,7,9,.88) 72%,transparent 73%)!important;
+  box-shadow:none!important;
+  animation:sovereignSealIdle 3.2s ease-in-out infinite!important;
+}
+.scourge-seal:before{
+  content:"";position:absolute;inset:0!important;border:1px solid rgba(222,204,161,.88)!important;
+  border-radius:50%!important;outline:1px solid rgba(222,204,161,.38)!important;outline-offset:5px!important;
+  background:repeating-conic-gradient(from 0deg,rgba(225,207,164,.5) 0deg .7deg,transparent .7deg 12deg);
+  mask:radial-gradient(ellipse,transparent 0 69%,#000 70% 73%,transparent 74%);
+}
+.scourge-seal:after{
+  content:"";position:absolute;inset:-8px!important;border-radius:50%!important;
+  background:conic-gradient(from -90deg,#e5c78c calc(var(--hold-progress)*1turn),transparent 0);
+  mask:radial-gradient(ellipse,transparent 0 72%,#000 73% 76%,transparent 77%);
+  opacity:.95;
+}
+.sovereign-sigil-svg{
+  position:absolute;inset:0;width:100%;height:100%;overflow:visible;
+  fill:none;stroke:#d8d4c8;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;
+  filter:drop-shadow(0 0 3px rgba(226,222,206,.45));
+}
+.sovereign-sigil-svg .sigil-outer{stroke-width:1.7}
+.sovereign-sigil-svg .sigil-inner{stroke-width:.8;opacity:.9}
+.sovereign-sigil-svg .sigil-dash{stroke-width:.7;stroke-dasharray:1.5 3.4;opacity:.9}
+.sovereign-sigil-svg .sigil-star{stroke-width:.8;opacity:.9}
+.sovereign-sigil-svg .sigil-pentagram{stroke-width:1.45}
+.sovereign-sigil-svg .sigil-core{fill:#e6dfc9;stroke:none}
+.sovereign-sigil-svg .sigil-rivets{fill:#e6dfc9;stroke:none}
+.seal-ring,.seal-glyph{display:none!important}
+.scourge-seal.is-holding{
+  animation:none!important;transform:scale(.97)!important;
+  filter:brightness(1.9) drop-shadow(0 0 14px rgba(178,48,52,.9))!important;
+}
+.scourge-seal.is-holding .sovereign-sigil-svg{
+  stroke:#f3e9d5;filter:drop-shadow(0 0 7px rgba(255,244,224,.9));
+}
+.scourge-seal.is-holding:before{background:rgba(148,27,34,.2)}
+.scourge-seal-wrap{width:220px!important;height:220px!important}
+.binding-chain{
+  width:146%!important;height:18px!important;margin:-9px 0 0 -73%!important;
+  background:
+    radial-gradient(ellipse 5px 8px at 8px 9px,transparent 54%,#f1d58e 59% 70%,#765222 77%,transparent 84%) 0 0/16px 18px repeat-x,
+    linear-gradient(180deg,#f4d994 0%,#9b6b2d 28%,#e4c17a 52%,#70491e 76%,#c69a50 100%)!important;
+  border:0!important;border-radius:0!important;
+  box-shadow:none!important;
+  filter:drop-shadow(0 1px 3px #080706) drop-shadow(0 0 4px rgba(218,177,96,.42))!important;
+}
+.chain-diagonal-one{transform:rotate(56deg)!important}
+.chain-diagonal-two{transform:rotate(-56deg)!important}
+.scourge-section.bindings-broken .chain-diagonal-one{animation:sovereignChainSnapA .64s ease-in forwards!important}
+.scourge-section.bindings-broken .chain-diagonal-two{animation:sovereignChainSnapB .64s ease-in forwards!important}
+@keyframes sovereignChainSnapA{
+  0%{transform:rotate(56deg) scaleX(1);opacity:1}
+  24%{transform:rotate(56deg) scaleX(1.035);opacity:1}
+  100%{transform:translate(-30px,-18px) rotate(56deg) scaleX(.08);opacity:0}
+}
+@keyframes sovereignChainSnapB{
+  0%{transform:rotate(-56deg) scaleX(1);opacity:1}
+  24%{transform:rotate(-56deg) scaleX(1.035);opacity:1}
+  100%{transform:translate(30px,18px) rotate(-56deg) scaleX(.08);opacity:0}
+}
+@keyframes sovereignSealIdle{
+  0%,100%{filter:brightness(.88);opacity:.9}
+  50%{filter:brightness(1.18);opacity:1}
+}
+@media(max-width:760px){
+  .scourge-seal{width:100px!important;height:132px!important}
+  .scourge-seal-wrap{width:190px!important;height:190px!important}
+  .binding-chain{height:15px!important;margin-top:-7px!important}
+}
