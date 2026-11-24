@@ -228,3 +228,92 @@
 @keyframes chainBottomSnap{0%{transform:translateX(0) rotate(0);opacity:1}12%{transform:translateX(14px) rotate(3deg)}27%{transform:translateX(-23px) rotate(-5deg)}47%{transform:translate(35px,16px) rotate(13deg)}73%{transform:translate(50px,-18px) rotate(-9deg)}86%{transform:translate(66px,-15vh) rotate(-15deg)}94%{transform:translate(58px,-13vh) rotate(-11deg)}100%{transform:translate(62px,-14vh) rotate(-12deg);opacity:.78}}
 @keyframes chainLeftSnap{0%{transform:translateY(0) rotate(0);opacity:1}13%{transform:translateY(12px) rotate(3deg)}30%{transform:translateY(-20px) rotate(-5deg)}50%{transform:translate(-14px,38px) rotate(-12deg)}75%{transform:translate(18px,55px) rotate(8deg)}87%{transform:translate(22vw,62px) rotate(15deg)}95%{transform:translate(20vw,53px) rotate(11deg)}100%{transform:translate(21vw,56px) rotate(12deg);opacity:.78}}
 @keyframes chainRightSnap{0%{transform:translateY(0) rotate(0);opacity:1}12%{transform:translateY(-13px) rotate(-3deg)}28%{transform:translateY(22px) rotate(5deg)}49%{transform:translate(16px,-36px) rotate(12deg)}74%{transform:translate(-19px,-53px) rotate(-8deg)}87%{transform:translate(-22vw,-62px) rotate(-15deg)}95%{transform:translate(-20vw,-53px) rotate(-11deg)}100%{transform:translate(-21vw,-56px) rotate(-12deg);opacity:.78}}
+
+/* === Sovereign seal: card-bound gold chains and a radiant hold === */
+.scourge-section{--radiance:0;isolation:isolate}
+.scourge-section:after{
+ content:"";position:absolute;z-index:4;inset:-10%;pointer-events:none;opacity:calc(var(--radiance)*.9);
+ background:radial-gradient(ellipse at 50% 48%,rgba(255,231,174,.8) 0%,rgba(236,190,104,.48) 16%,rgba(191,142,61,.2) 37%,transparent 68%);
+ transform:scale(calc(.45 + var(--radiance)*1.25));
+ mix-blend-mode:screen;transition:opacity .12s linear,transform .12s linear;
+}
+.scourge-section.radiance-burst:after{animation:radiantRelease 1.25s ease-out forwards}
+@keyframes radiantRelease{
+  0%{opacity:.95;transform:scale(.55);filter:blur(0)}
+  45%{opacity:1;transform:scale(1.5);filter:blur(4px)}
+  100%{opacity:0;transform:scale(2.3);filter:blur(18px)}
+}
+.scourge-content{z-index:5;min-height:100vh;justify-content:center;padding:100px 20px 110px}
+.scourge-content>.section-kicker{position:absolute;top:70px;z-index:6}
+.scourge-tarot-stage{
+ position:relative;z-index:3;left:auto;top:auto;transform:none;
+ width:min(350px,76vw);height:min(525px,68vh);min-height:390px;
+ margin:0 auto;overflow:visible;filter:brightness(.78) saturate(.8);
+}
+.scourge-tarot-stage.is-released{transform:translateY(-8px) scale(1.025);filter:brightness(1.08) saturate(1)}
+.scourge-tarot-inner{z-index:1}
+.card-bindings{position:absolute;z-index:4;inset:0;overflow:hidden;pointer-events:none;transition:opacity .45s ease}
+.binding-chain{
+ position:absolute;display:block;left:50%;top:50%;width:145%;height:19px;
+ margin:-9px 0 0 -72.5%;transform-origin:center;
+ background:
+  radial-gradient(ellipse 8px 10px at 9px 9px,transparent 56%,#d9b66e 61% 73%,#75511f 78%,transparent 84%) 0 0/18px 19px repeat-x,
+  linear-gradient(180deg,#f3d58f 0%,#9b6b2d 28%,#e3bf78 52%,#70491e 76%,#c69a50 100%);
+ filter:drop-shadow(0 2px 3px #080706) drop-shadow(0 0 5px rgba(218,177,96,.45));
+}
+.chain-diagonal-one{transform:rotate(34deg)}
+.chain-diagonal-two{transform:rotate(-34deg)}
+.scourge-seal-wrap{
+ position:absolute;z-index:6;left:50%;top:50%;transform:translate(-50%,-50%);
+ width:230px;height:230px;margin:0;display:flex;align-items:center;justify-content:center;
+ pointer-events:none;
+}
+.scourge-seal{
+ pointer-events:auto;width:164px;height:164px;border:1px solid rgba(236,199,125,.78);
+ background:
+  radial-gradient(circle,rgba(255,225,164,.18),transparent 48%),
+  repeating-conic-gradient(from 0deg,rgba(238,199,126,.14) 0deg 1deg,transparent 1deg 12deg),
+  radial-gradient(circle,#34291a 0 35%,#19150f 36% 65%,#0c0c0b 66%);
+ box-shadow:0 0 0 5px rgba(10,9,7,.82),0 0 0 7px rgba(198,153,76,.5),0 0 32px rgba(206,164,91,.32),inset 0 0 30px rgba(227,185,105,.22);
+ animation:sigilBreath 3.2s ease-in-out infinite;
+}
+.scourge-seal:before{inset:12px;border:1px solid rgba(240,207,143,.72);outline:1px dashed rgba(222,184,110,.55);outline-offset:7px}
+.scourge-seal:after{background:conic-gradient(#f5d58f calc(var(--hold-progress)*1turn),transparent 0)}
+.seal-ring{border-color:rgba(232,193,117,.52)}
+.seal-glyph{color:#f0d394;text-shadow:0 0 22px rgba(255,220,151,.8)}
+@keyframes sigilBreath{
+  0%,100%{filter:brightness(.9);box-shadow:0 0 0 5px rgba(10,9,7,.82),0 0 0 7px rgba(198,153,76,.42),0 0 28px rgba(206,164,91,.22),inset 0 0 25px rgba(227,185,105,.16)}
+  50%{filter:brightness(1.22);box-shadow:0 0 0 5px rgba(10,9,7,.82),0 0 0 8px rgba(224,185,106,.65),0 0 48px rgba(230,190,112,.48),inset 0 0 36px rgba(255,215,140,.28)}
+}
+.scourge-seal.is-holding{animation:none;filter:brightness(1.5);transform:scale(.96)}
+.scourge-seal.is-holding .seal-glyph{animation:sealPulse .45s ease-in-out infinite alternate}
+.seal-instruction{
+ position:absolute;top:calc(100% + 26px);left:50%;transform:translateX(-50%);
+ width:max-content;padding:0;border:0;background:transparent;
+ color:#e4c27f;font:10px var(--serif);letter-spacing:.28em;text-shadow:0 0 12px rgba(230,188,105,.45);
+}
+.scourge-section.bindings-broken .card-bindings{animation:bindingsVanish .65s ease-out forwards}
+@keyframes bindingsVanish{0%{opacity:1;filter:brightness(1.8)}35%{opacity:.9;filter:brightness(2.5) blur(1px)}100%{opacity:0;filter:brightness(3) blur(7px)}}
+.scourge-section.bindings-broken .binding-chain{animation:chainBreakAway .62s ease-in forwards}
+@keyframes chainBreakAway{
+  0%{opacity:1;filter:brightness(2)}
+  35%{opacity:1;transform:scaleX(1.03) rotate(var(--chain-angle,34deg))}
+  100%{opacity:0;transform:scaleX(.1) rotate(var(--chain-angle,34deg));filter:blur(5px)}
+}
+.chain-diagonal-one{--chain-angle:34deg}.chain-diagonal-two{--chain-angle:-34deg}
+.scourge-quote{position:absolute;left:20px;right:20px;bottom:42px;margin:0;padding:0;z-index:6}
+.scourge-section>.site-footer{position:absolute;left:0;right:0;bottom:0;z-index:6}
+@media(max-width:600px){
+ .scourge-content{padding:95px 14px 120px}
+ .scourge-content>.section-kicker{top:45px}
+ .scourge-tarot-stage{width:min(300px,78vw);height:min(450px,64vh);min-height:340px}
+ .scourge-seal{width:140px;height:140px}
+ .scourge-seal-wrap{width:205px;height:205px}
+ .binding-chain{height:15px;margin-top:-7px}
+ .scourge-quote{bottom:54px;font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+ .scourge-seal{animation:none}
+ .scourge-section:after{transition:none}
+ .scourge-section.bindings-broken .binding-chain{animation-duration:.01ms}
+}
