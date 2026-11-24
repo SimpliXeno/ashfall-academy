@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111211">
+  <meta name="description" content="Ashfall Academy — Reclaim what was lost. Serve what remains. Pray you return.">
+  <title>Ashfall Academy — The World Is Rotting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#top"><span class="brand-mark">✦</span><span>ASHFALL <small>ACADEMY</small></span></a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#academy">The Academy</a><a href="#reclaimers">Reclaimers</a><a href="#faculty">Faculty</a><a href="#hell">Hell's Elite</a><a href="#scourge">The Scourge</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="academy">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content">
+        <p class="eyebrow">THE CHURCH OF HUMANITY PRESENTS</p>
+        <div class="hero-rule"></div>
+        <h1>THE WORLD<br><em>IS ROTTING.</em></h1>
+        <p class="hero-subtitle">THEY SEND THEIR CHILDREN BELOW.</p>
+        <p class="hero-copy">Reclaim what was lost. Serve what remains.<br>Pray you return.</p>
+        <a class="seal-button" href="#reclaimers">ENTER THE ROSTER <span>↓</span></a>
+      </div>
+      <div class="hero-caption"><span>ASHFALL ACADEMY</span><span>EST. BY THE CHURCH</span></div>
+      <div class="hero-scroll">SCROLL TO DESCEND <span>↓</span></div>
+    </section>
+
+    <section class="intro section-wrap">
+      <div class="section-kicker">I · THE LAST SANCTUARY</div>
+      <div class="intro-grid">
+        <div><h2>A WORLD<br>ON ITS <em>LAST BREATH.</em></h2></div>
+        <div class="intro-copy">
+          <p class="lead">Beyond the Gates, the world has already begun to die.</p>
+          <p>Under the Church's guidance, Ashfall Academy prepares the next generation to descend into the Below. They are trained, tested, and sent to reclaim what humanity has lost.</p>
+          <p>Those who fall are remembered as martyrs. Those who return are honored—and expected to descend again.</p>
+          <p class="muted">The truth is buried deeper than the rot.</p>
+        </div>
+      </div>
+      <div class="stats-strip"><div><strong>639</strong><span>ENROLLED STUDENTS</span></div><div><strong>03</strong><span>YEARS OF STUDY</span></div><div><strong>14</strong><span>DAYS PER CRUSADE</span></div><div><strong>87</strong><span>DAYS UNTIL DESCENT</span></div></div>
+    </section>
+
+    <section class="roster-section section-wrap" id="reclaimers">
+      <div class="section-heading">
+        <div><div class="section-kicker">II · THE NEXT GENERATION</div><h2>YOUNG <em>RECLAIMERS</em></h2></div>
+        <p>Six hundred and thirty-nine students stand beneath the same banner. These are a few of the faces the Academy has entrusted to the Below.</p>
+      </div>
+      <div class="filter-bar" role="group" aria-label="Filter students by year">
+        <button class="filter-button active" data-year="all">All Years <span>12</span></button>
+        <button class="filter-button" data-year="1">First Year</button>
+        <button class="filter-button" data-year="2">Second Year</button>
+        <button class="filter-button" data-year="3">Third Year</button>
+      </div>
+      <div class="character-grid" id="student-grid"></div>
+    </section>
+
+    <section class="faculty-section section-wrap" id="faculty">
+      <div class="section-heading">
+        <div><div class="section-kicker">III · THOSE WHO GUIDE THE DESCENT</div><h2>THE <em>FACULTY</em></h2></div>
+        <p>Instructors, inquisitors, and keepers. Each has a place within the Academy—and a reason to remain.</p>
+      </div>
+      <div class="character-grid faculty-grid" id="faculty-grid"></div>
+    </section>
+
+    <section class="hell-section" id="hell">
+      <div class="hell-backdrop"></div>
+      <div class="section-wrap hell-inner">
+        <div class="section-heading">
+          <div><div class="section-kicker red-kicker">IV · BEYOND THE GATES</div><h2>HELL'S <em>ELITE</em></h2></div>
+          <p>There are powers Below that do not hide in the dark. They rule it.</p>
+        </div>
+        <div class="character-grid hell-grid" id="hell-grid"></div>
+      </div>
+    </section>
+
+    <section class="scourge-section" id="scourge">
+      <div class="scourge-backdrop"></div>
+      <div class="scourge-content">
+        <div class="section-kicker red-kicker">V · THE LAST JUDGMENT</div>
+        <div class="halo-symbol" aria-hidden="true">◉</div>
+        <p class="scourge-pretitle">THE ONE THEY NAMED</p>
+        <h2>THE <em>SCOURGE</em></h2>
+        <p class="scourge-name">ESHRAEL</p>
+        <p class="scourge-quote">“The angel who was sent to judge humanity.”</p>
+        <button class="binding-button" id="scourge-reveal" aria-expanded="false">BREAK THE SEAL <span>＋</span></button>
+        <div class="sealed-record" id="scourge-record" hidden>
+          <div class="record-label">SEALED CHURCH RECORD · ACCESS FORBIDDEN</div>
+          <p>Angel of Judgment. Imprisoned in the deepest reaches of Hell. His existence is bound to the barrier between Earth and the Below.</p>
+          <p class="record-warning">DO NOT MISTAKE THE PRISONER FOR THE PLAGUE.</p>
+          <div class="record-stats"><span>CORE AFFINITY <b>Totality</b></span><span>BLOOD RANK <b>IX</b></span><span>POTENTIAL <b>V</b></span></div>
+        </div>
+      </div>
+      <footer class="site-footer"><span>ASHFALL ACADEMY</span><span>RECLAIM WHAT WAS LOST.</span><a href="#top">RETURN TO THE SURFACE ↑</a></footer>
+    </section>
+  </main>
+
+  <dialog class="dossier-dialog" id="dossier">
+    <button class="dialog-close" aria-label="Close dossier">×</button>
+    <div class="dialog-image" id="dialog-image"><span>PORTRAIT PLACEHOLDER</span></div>
+    <div class="dialog-content">
+      <div class="section-kicker" id="dialog-kicker">ACADEMY RECORD</div>
+      <h2 id="dialog-name">Character Name</h2>
+      <p class="dialog-role" id="dialog-role"></p>
+      <p id="dialog-personality"></p>
+      <div class="dossier-details" id="dialog-details"></div>
+      <p class="dialog-note">Replace this text with a fuller biography, quote, or additional character notes.</p>
+    </div>
+  </dialog>
+
+  <script src="js/characters.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
