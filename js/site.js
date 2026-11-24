@@ -70,7 +70,7 @@
   dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();});
 
   // Hold-to-break seal: pointer events support mouse, touch, and pen.
-  const seal=$("#scourge-seal"), record=$("#scourge-record"), instruction=$("#seal-instruction");
+  const seal=$("#scourge-seal"), record=$("#scourge-record"), instruction=$("#seal-instruction"), judgement=$("#scourge");
   let holdTimer=null, holdStart=0, completed=false, pointerHeld=false, rafId=null;
   const HOLD_MS=2600;
   function updateHold() {
@@ -96,17 +96,19 @@
   }
   function completeSeal() {
     pointerHeld=false;completed=true;cancelAnimationFrame(rafId);
-    seal.classList.remove("is-holding");seal.classList.add("chains-torn");
+    seal.classList.remove("is-holding");
+    judgement.classList.add("bindings-torn");
     seal.disabled=true;
-    instruction.textContent="THE CHAINS HAVE BEEN TORN APART.";
-    seal.setAttribute("aria-label","The chains have been torn apart; Eshrael's tarot is revealed");
+    instruction.textContent="THE BINDINGS HAVE BEEN SHATTERED.";
+    seal.setAttribute("aria-label","The bindings are broken; Eshrael's tarot is revealed");
     window.setTimeout(()=>{
       seal.classList.add("seal-fading");
-      record.hidden=false;
-      requestAnimationFrame(()=>record.classList.add("is-revealed"));
+      record.classList.remove("is-bound");
+      record.classList.add("is-released");
       instruction.textContent="THE SEALED RECORD IS OPEN.";
       $("#scourge-quote").textContent="A name once buried beneath the weight of Heaven.";
-    },720);
+      window.setTimeout(()=>record.classList.add("is-revealed"),520);
+    },760);
   }
   seal.addEventListener("pointerdown",startHold);
   seal.addEventListener("pointerup",cancelHold);
