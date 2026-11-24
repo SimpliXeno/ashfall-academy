@@ -69,46 +69,46 @@
   $(".dialog-close").addEventListener("click",()=>dialog.close());
   dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close();});
 
-  // Hold-to-break seal: pointer events support mouse, touch, and pen.
+  // Hold-to-break seal: quiet reset on release, radiant release on completion.
   const seal=$("#scourge-seal"), record=$("#scourge-record"), instruction=$("#seal-instruction"), judgement=$("#scourge");
-  let holdTimer=null, holdStart=0, completed=false, pointerHeld=false, rafId=null;
+  let completed=false, pointerHeld=false, rafId=null;
   const HOLD_MS=2600;
-  function updateHold() {
-    if(!pointerHeld || completed) return;
+  function updateHold(){
+    if(!pointerHeld||completed)return;
     const progress=Math.min(1,(performance.now()-holdStart)/HOLD_MS);
     seal.style.setProperty("--hold-progress",progress);
+    judgement.style.setProperty("--radiance",progress);
     if(progress>=1){completeSeal();return;}
     rafId=requestAnimationFrame(updateHold);
   }
-  function startHold(e) {
-    if(completed || pointerHeld) return;
-    pointerHeld=true; holdStart=performance.now();
+  let holdStart=0;
+  function startHold(e){
+    if(completed||pointerHeld)return;
+    pointerHeld=true;holdStart=performance.now();
     seal.classList.add("is-holding");
-    instruction.textContent="THE SEAL IS FRACTURING…";
-    try{seal.setPointerCapture(e.pointerId);}catch(_){}
+    try{seal.setPointerCapture(e.pointerId)}catch(_){}
     rafId=requestAnimationFrame(updateHold);
   }
-  function cancelHold() {
-    if(!pointerHeld || completed) return;
-    pointerHeld=false;cancelAnimationFrame(rafId);clearTimeout(holdTimer);
-    seal.classList.remove("is-holding");seal.style.setProperty("--hold-progress",0);
-    instruction.textContent="THE BINDING HOLDS. PRESS AND HOLD AGAIN.";
+  function cancelHold(){
+    if(!pointerHeld||completed)return;
+    pointerHeld=false;cancelAnimationFrame(rafId);
+    seal.classList.remove("is-holding");
+    seal.style.setProperty("--hold-progress",0);
+    judgement.style.setProperty("--radiance",0);
   }
-  function completeSeal() {
+  function completeSeal(){
     pointerHeld=false;completed=true;cancelAnimationFrame(rafId);
     seal.classList.remove("is-holding");
-    judgement.classList.add("bindings-torn");
+    judgement.classList.add("bindings-broken","radiance-burst");
     seal.disabled=true;
-    instruction.textContent="THE BINDINGS HAVE BEEN SHATTERED.";
-    seal.setAttribute("aria-label","The bindings are broken; Eshrael's tarot is revealed");
     window.setTimeout(()=>{
       seal.classList.add("seal-fading");
       record.classList.remove("is-bound");
       record.classList.add("is-released");
-      instruction.textContent="THE SEALED RECORD IS OPEN.";
+      window.setTimeout(()=>record.classList.add("is-revealed"),450);
+      instruction.textContent=" ";
       $("#scourge-quote").textContent="A name once buried beneath the weight of Heaven.";
-      window.setTimeout(()=>record.classList.add("is-revealed"),520);
-    },760);
+    },650);
   }
   seal.addEventListener("pointerdown",startHold);
   seal.addEventListener("pointerup",cancelHold);
