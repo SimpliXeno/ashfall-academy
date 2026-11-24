@@ -72,7 +72,7 @@
   // Hold-to-break seal: quiet reset on release, radiant release on completion.
   const seal=$("#scourge-seal"), record=$("#scourge-record"), instruction=$("#seal-instruction"), judgement=$("#scourge");
   let completed=false, pointerHeld=false, rafId=null;
-  const HOLD_MS=2600;
+  const HOLD_MS=2400;
   function updateHold(){
     if(!pointerHeld||completed)return;
     const progress=Math.min(1,(performance.now()-holdStart)/HOLD_MS);
