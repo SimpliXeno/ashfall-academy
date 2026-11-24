@@ -211,3 +211,9 @@
  .chain-left{left:calc(50% - 43px)}.chain-right{left:calc(50% + 28px)}
 }
 @media(prefers-reduced-motion:reduce){.scourge-section.bindings-torn .binding-chain{animation-duration:.01ms}.scourge-tarot-stage{transition:none}}
+
+/* Keep the seal, chains, and bound card on one shared full-screen centerline. */
+.scourge-content{min-height:100vh}
+.scourge-quote{position:absolute;left:24px;right:24px;bottom:78px;margin:0;padding:0}
+.scourge-section>.site-footer{position:absolute;left:0;right:0;bottom:0}
+@media(max-width:520px){.scourge-quote{left:14px;right:14px;bottom:82px;padding:0}}
