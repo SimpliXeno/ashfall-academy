@@ -287,3 +287,96 @@
  .scourge-section.radiance-burst .scourge-tarot-stage{animation-duration:.01ms}
  .scourge-tarot-inner{transition:none}
 }
+
+
+/* === Final card scale + Scourge seal refinement === */
+/* Keep the archive's character tarot cards compact rather than oversized. */
+.character-grid{grid-template-columns:repeat(5,minmax(0,190px));justify-content:center;gap:18px}
+.faculty-grid{grid-template-columns:repeat(5,minmax(0,190px));justify-content:center;gap:18px}
+.tarot-card{width:100%;max-width:190px;justify-self:center}
+.tarot-frame{width:100%;aspect-ratio:2/3;padding:7px}
+.tarot-card .portrait{height:auto;min-height:0;flex:1}
+@media(max-width:1100px){
+ .character-grid,.faculty-grid{grid-template-columns:repeat(4,minmax(0,190px))}
+}
+@media(max-width:900px){
+ .character-grid,.faculty-grid{grid-template-columns:repeat(3,minmax(0,190px))}
+}
+@media(max-width:700px){
+ .character-grid,.faculty-grid{grid-template-columns:repeat(2,minmax(0,190px))}
+ .tarot-card .portrait{height:auto;flex:1}
+}
+@media(max-width:430px){
+ .character-grid,.faculty-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .tarot-card{max-width:180px}
+}
+
+/* The Sovereign medallion is a translucent circular rune, not a dark oval plate. */
+.scourge-seal{
+ width:clamp(148px,16vw,176px)!important;height:clamp(148px,16vw,176px)!important;
+ aspect-ratio:1/1;border-radius:50%;overflow:visible!important;
+ background:radial-gradient(circle,rgba(8,9,10,.22) 0 48%,rgba(8,9,10,.08) 68%,transparent 73%)!important;
+ box-shadow:0 0 0 1px rgba(229,216,185,.24),0 0 22px rgba(205,190,153,.12),inset 0 0 18px rgba(229,216,185,.08)!important;
+ animation:sovereignCircleBreath 4s ease-in-out infinite!important;
+ transition:filter .3s,transform .3s,opacity .35s
+}
+.scourge-seal:before{
+ inset:4px!important;border:1px solid rgba(229,220,197,.32)!important;
+ outline:1px dashed rgba(229,220,197,.18)!important;outline-offset:5px!important;
+ background:conic-gradient(from 0deg,transparent 0 8deg,rgba(230,216,181,.14) 8deg 9deg,transparent 9deg 18deg)!important;
+ mask:radial-gradient(circle,transparent 0 78%,#000 79% 81%,transparent 82%)!important
+}
+.scourge-seal:after{
+ inset:-5px!important;border-radius:50%!important;
+ background:conic-gradient(from -90deg,rgba(226,195,133,.9) calc(var(--hold-progress)*1turn),transparent 0)!important;
+ mask:radial-gradient(circle,transparent 0 83%,#000 84% 86%,transparent 87%)!important;
+ opacity:.75!important
+}
+@keyframes sovereignCircleBreath{
+ 0%,100%{filter:brightness(.88);box-shadow:0 0 0 1px rgba(229,216,185,.2),0 0 16px rgba(205,190,153,.08),inset 0 0 12px rgba(229,216,185,.04)}
+ 50%{filter:brightness(1.2);box-shadow:0 0 0 1px rgba(229,216,185,.5),0 0 34px rgba(205,190,153,.25),inset 0 0 20px rgba(229,216,185,.12)}
+}
+.sovereign-sigil-svg{
+ position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;
+ stroke:rgba(231,225,208,.82);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;
+ filter:drop-shadow(0 0 2px rgba(226,222,206,.28))
+}
+.sovereign-sigil-svg .sigil-outer{stroke:rgba(235,229,211,.78);stroke-width:1.2}
+.sovereign-sigil-svg .sigil-inner{stroke:rgba(235,229,211,.52);stroke-width:.85}
+.sovereign-sigil-svg .sigil-dash{stroke:rgba(235,229,211,.48);stroke-width:.75;stroke-dasharray:1.5 3.8}
+.sovereign-sigil-svg .sigil-pentagram{stroke:rgba(245,241,226,.95);stroke-width:1.8;filter:drop-shadow(0 0 3px rgba(255,250,232,.42))}
+.sovereign-sigil-svg .sigil-core{fill:rgba(246,242,226,.96);stroke:none}
+.sovereign-sigil-svg .sigil-rivets{fill:rgba(235,229,211,.85);stroke:none}
+.sigil-cracks{fill:none;stroke:#fff1d1;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(255,225,166,.85))}
+.sigil-crack{opacity:calc(var(--hold-progress)*1.25);stroke-dasharray:44;stroke-dashoffset:calc(44 - (var(--hold-progress)*44))}
+.scourge-seal.seal-cracked .sigil-crack{opacity:1;stroke-dashoffset:0;animation:crackFlash .48s ease-out both}
+@keyframes crackFlash{0%{filter:brightness(1);stroke-width:1}35%{filter:brightness(2.5);stroke-width:3}100%{filter:brightness(1.2);stroke-width:1.8}}
+.scourge-seal.seal-cracked .sovereign-sigil-svg{animation:sigilFracture .58s ease-in forwards}
+@keyframes sigilFracture{0%{transform:scale(1);opacity:1}35%{transform:scale(1.035) rotate(1deg);opacity:1}100%{transform:scale(.78) rotate(-5deg);opacity:0;filter:blur(5px)}}
+.scourge-seal.is-holding{animation:none!important;transform:scale(.98);filter:brightness(1.5) drop-shadow(0 0 12px rgba(225,195,138,.65))}
+.scourge-seal.is-holding:before{background:conic-gradient(from 0deg,rgba(225,207,164,.24),transparent 35%,rgba(225,207,164,.12),transparent 75%)!important}
+.scourge-seal.seal-fading{opacity:0!important;transform:scale(.62)!important;filter:blur(8px)!important;pointer-events:none}
+.scourge-seal.seal-fading .sovereign-sigil-svg{opacity:0}
+.scourge-seal-wrap{width:220px;height:220px}
+.scourge-seal-wrap .seal-instruction{top:calc(100% + 16px)}
+/* Individual interlocking oval links, alternating angle, over a dark chain core. */
+.binding-chain{
+ width:158%!important;height:20px!important;margin:-10px 0 0 -79%!important;
+ border:0!important;border-radius:0!important;
+ background-color:transparent!important;
+ background-image:
+ url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='20' viewBox='0 0 28 20'%3E%3Cg fill='none' stroke='%235d4526' stroke-width='4'%3E%3Cellipse cx='7' cy='10' rx='6' ry='3.8' transform='rotate(-34 7 10)'/%3E%3Cellipse cx='21' cy='10' rx='6' ry='3.8' transform='rotate(34 21 10)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23e4c27e' stroke-width='2.2'%3E%3Cellipse cx='7' cy='10' rx='6' ry='3.8' transform='rotate(-34 7 10)'/%3E%3Cellipse cx='21' cy='10' rx='6' ry='3.8' transform='rotate(34 21 10)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff0c5' stroke-width='.7' opacity='.8'%3E%3Cpath d='M3 8 Q7 4 10 8 M17 12 Q21 16 24 12'/%3E%3C/g%3E%3C/svg%3E");
+ background-repeat:repeat-x!important;background-size:28px 20px!important;
+ filter:drop-shadow(0 2px 3px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(211,174,103,.32))!important
+}
+.chain-diagonal-one{transform:rotate(56deg)!important}
+.chain-diagonal-two{transform:rotate(-56deg)!important}
+.scourge-section.bindings-broken .chain-diagonal-one{animation:sovereignChainSnapA .64s ease-in forwards}
+.scourge-section.bindings-broken .chain-diagonal-two{animation:sovereignChainSnapB .64s ease-in forwards}
+@media(max-width:760px){
+ .scourge-seal{width:142px!important;height:142px!important}
+ .binding-chain{height:17px!important;background-size:24px 17px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .scourge-seal{animation:none!important}
+}
