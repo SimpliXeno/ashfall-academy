@@ -359,31 +359,8 @@
 .scourge-seal.seal-fading .sovereign-sigil-svg{opacity:0}
 .scourge-seal-wrap{width:220px;height:220px}
 .scourge-seal-wrap .seal-instruction{top:calc(100% + 16px)}
-/* Individual interlocking oval links, alternating angle, over a dark chain core. */
-.binding-chain{
- width:158%!important;height:20px!important;margin:-10px 0 0 -79%!important;
- border:0!important;border-radius:0!important;
- background-color:transparent!important;
- background-image:
- url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='20' viewBox='0 0 28 20'%3E%3Cg fill='none' stroke='%235d4526' stroke-width='4'%3E%3Cellipse cx='7' cy='10' rx='6' ry='3.8' transform='rotate(-34 7 10)'/%3E%3Cellipse cx='21' cy='10' rx='6' ry='3.8' transform='rotate(34 21 10)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23e4c27e' stroke-width='2.2'%3E%3Cellipse cx='7' cy='10' rx='6' ry='3.8' transform='rotate(-34 7 10)'/%3E%3Cellipse cx='21' cy='10' rx='6' ry='3.8' transform='rotate(34 21 10)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff0c5' stroke-width='.7' opacity='.8'%3E%3Cpath d='M3 8 Q7 4 10 8 M17 12 Q21 16 24 12'/%3E%3C/g%3E%3C/svg%3E");
- background-repeat:repeat-x!important;background-size:28px 20px!important;
- filter:drop-shadow(0 2px 3px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(211,174,103,.32))!important
-}
-.chain-diagonal-one{transform:rotate(56deg)!important}
-.chain-diagonal-two{transform:rotate(-56deg)!important}
-.scourge-section.bindings-broken .chain-diagonal-one{animation:sovereignChainSnapA .64s ease-in forwards}
-.scourge-section.bindings-broken .chain-diagonal-two{animation:sovereignChainSnapB .64s ease-in forwards}
-@media(max-width:760px){
- .scourge-seal{width:142px!important;height:142px!important}
- .binding-chain{height:17px!important;background-size:24px 17px!important}
-}
-@media(prefers-reduced-motion:reduce){
- .scourge-seal{animation:none!important}
-}
 
-
-/* === Scourge preview silhouette + full-span linked bindings === */
-/* Keep Eshrael visible on the sealed card before the reveal. */
+/* === Scourge: sealed preview and physically linked gold chains === */
 .scourge-tarot-back{
  background:
  radial-gradient(ellipse at 50% 45%,rgba(185,151,95,.16) 0%,rgba(104,83,55,.09) 34%,transparent 68%),
@@ -396,27 +373,30 @@
  width:132%!important;height:101%!important;max-width:none!important;
  object-fit:contain!important;object-position:center bottom!important;
  opacity:.98!important;mix-blend-mode:normal!important;
- filter:
-   drop-shadow(0 0 2px rgba(225,207,169,.5))
-   drop-shadow(0 0 9px rgba(181,150,99,.28))
-   drop-shadow(0 10px 16px rgba(0,0,0,.8))!important;
+ filter:drop-shadow(0 0 2px rgba(225,207,169,.5))
+        drop-shadow(0 0 9px rgba(181,150,99,.28))
+        drop-shadow(0 10px 16px rgba(0,0,0,.8))!important
 }
-/* Crossed chains extend beyond all four card edges, like the reference. */
-.card-bindings{z-index:6!important;inset:0!important;overflow:visible!important}
+/* Clip the chain ends to the tarot frame; the diagonals terminate at its corners. */
+.card-bindings{
+ position:absolute!important;z-index:6!important;inset:0!important;
+ overflow:hidden!important;pointer-events:none!important
+}
 .binding-chain{
  position:absolute!important;left:50%!important;top:50%!important;
- width:226%!important;height:22px!important;margin:-11px 0 0 -113%!important;
- border:0!important;border-radius:0!important;background-color:transparent!important;
- background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='22' viewBox='0 0 30 22'%3E%3Cg fill='none' stroke='%233c2b17' stroke-width='5'%3E%3Cellipse cx='7.5' cy='11' rx='7' ry='4.7' transform='rotate(-38 7.5 11)'/%3E%3Cellipse cx='22.5' cy='11' rx='7' ry='4.7' transform='rotate(38 22.5 11)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23916b35' stroke-width='3.5'%3E%3Cellipse cx='7.5' cy='11' rx='7' ry='4.7' transform='rotate(-38 7.5 11)'/%3E%3Cellipse cx='22.5' cy='11' rx='7' ry='4.7' transform='rotate(38 22.5 11)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23e8cc8c' stroke-width='2.1'%3E%3Cellipse cx='7.5' cy='11' rx='7' ry='4.7' transform='rotate(-38 7.5 11)'/%3E%3Cellipse cx='22.5' cy='11' rx='7' ry='4.7' transform='rotate(38 22.5 11)'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff0c8' stroke-width='.8' opacity='.88'%3E%3Cpath d='M2 9 Q6 4 10 8 M20 14 Q24 18 28 12'/%3E%3C/g%3E%3C/svg%3E")!important;
- background-repeat:repeat-x!important;background-size:30px 22px!important;
- filter:drop-shadow(0 2px 3px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(219,181,106,.38))!important
+ width:178%!important;height:22px!important;margin:-11px 0 0 -89%!important;
+ border:0!important;border-radius:0!important;background:transparent!important;
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fff0c7'/%3E%3Cstop offset='.28' stop-color='%23d9b875'/%3E%3Cstop offset='.62' stop-color='%23966c35'/%3E%3Cstop offset='1' stop-color='%23f1d99f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='none' stroke='%232a1d10' stroke-width='5' stroke-linecap='round'%3E%3Cellipse cx='7' cy='12' rx='9' ry='5' transform='rotate(-9 7 12)'/%3E%3Cellipse cx='19' cy='12' rx='5' ry='9'/%3E%3C/g%3E%3Cg fill='none' stroke='url(%23g)' stroke-width='3.1' stroke-linecap='round'%3E%3Cellipse cx='7' cy='12' rx='9' ry='5' transform='rotate(-9 7 12)'/%3E%3Cellipse cx='19' cy='12' rx='5' ry='9'/%3E%3C/g%3E%3Cg fill='none' stroke='%23fff2cf' stroke-width='.85' opacity='.9'%3E%3Cpath d='M1 10 Q2 7 6 7 M17 5 Q21 6 22 10'/%3E%3C/g%3E%3C/svg%3E")!important;
+ background-repeat:repeat-x!important;background-size:24px 24px!important;
+ filter:drop-shadow(0 2px 2px rgba(0,0,0,.95)) drop-shadow(0 0 3px rgba(219,181,106,.28))!important
 }
 .chain-diagonal-one{transform:rotate(56deg)!important}
 .chain-diagonal-two{transform:rotate(-56deg)!important}
-/* The central medallion sits above the crossing chains and silhouette. */
 .scourge-seal-wrap{z-index:9!important}
 .scourge-seal{z-index:9!important}
+.scourge-section.bindings-broken .chain-diagonal-one{animation:sovereignChainSnapA .64s ease-in forwards}
+.scourge-section.bindings-broken .chain-diagonal-two{animation:sovereignChainSnapB .64s ease-in forwards}
 @media(max-width:760px){
- .binding-chain{width:226%!important;height:19px!important;margin:-9.5px 0 0 -113%!important;background-size:26px 19px!important}
+ .binding-chain{height:19px!important;margin-top:-9.5px!important;background-size:22px 22px!important}
  .sealed-figure-img{width:138%!important;height:100%!important;top:0!important}
 }
