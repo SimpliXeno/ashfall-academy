@@ -82,8 +82,47 @@
     rafId=requestAnimationFrame(updateHold);
   }
   let holdStart=0;
+  let sealAudio=null;
+  function getSealAudio(){
+    if(sealAudio)return sealAudio;
+    const AudioContextClass=window.AudioContext||window.webkitAudioContext;
+    if(!AudioContextClass)return null;
+    try{sealAudio=new AudioContextClass();if(sealAudio.state==="suspended")sealAudio.resume();return sealAudio;}catch(_){return null;}
+  }
+  function playSealBreak(){
+    const ctx=getSealAudio();if(!ctx)return;
+    const now=ctx.currentTime;
+    const master=ctx.createGain();
+    master.gain.setValueAtTime(.0001,now);
+    master.gain.exponentialRampToValueAtTime(.34,now+.025);
+    master.gain.exponentialRampToValueAtTime(.0001,now+1.65);
+    master.connect(ctx.destination);
+    [392,587.33,783.99,1174.66].forEach((hz,i)=>{
+      const osc=ctx.createOscillator(),gain=ctx.createGain();
+      osc.type=i===0?"triangle":"sine";
+      osc.frequency.setValueAtTime(hz,now);
+      osc.frequency.exponentialRampToValueAtTime(hz*(i%2 ? .72 : .86),now+1.25);
+      gain.gain.setValueAtTime(.0001,now);
+      gain.gain.exponentialRampToValueAtTime(.12/(i+1),now+.018);
+      gain.gain.exponentialRampToValueAtTime(.0001,now+1.5);
+      osc.connect(gain);gain.connect(master);osc.start(now);osc.stop(now+1.55);
+    });
+    const length=Math.floor(ctx.sampleRate*.42);
+    const buffer=ctx.createBuffer(1,length,ctx.sampleRate),samples=buffer.getChannelData(0);
+    for(let i=0;i<length;i++)samples[i]=(Math.random()*2-1)*(1-i/length);
+    const noise=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),snap=ctx.createGain();
+    noise.buffer=buffer;filter.type="highpass";
+    filter.frequency.setValueAtTime(1500,now);
+    filter.frequency.exponentialRampToValueAtTime(420,now+.32);
+    snap.gain.setValueAtTime(.0001,now);
+    snap.gain.exponentialRampToValueAtTime(.5,now+.008);
+    snap.gain.exponentialRampToValueAtTime(.0001,now+.38);
+    noise.connect(filter);filter.connect(snap);snap.connect(master);
+    noise.start(now);noise.stop(now+.42);
+  }
   function startHold(e){
     if(completed||pointerHeld)return;
+    getSealAudio();
     pointerHeld=true;holdStart=performance.now();
     seal.classList.add("is-holding");
     try{seal.setPointerCapture(e.pointerId)}catch(_){}
@@ -99,7 +138,8 @@
   function completeSeal(){
     pointerHeld=false;completed=true;cancelAnimationFrame(rafId);
     seal.classList.remove("is-holding");
-    judgement.classList.add("bindings-broken","radiance-burst");
+    judgement.classList.add("bindings-broken","radiance-burst","flash-release");
+    playSealBreak();
     seal.disabled=true;
     window.setTimeout(()=>{
       seal.classList.add("seal-fading");
