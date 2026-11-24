@@ -170,8 +170,21 @@
           </div>
           <div class="scourge-seal-wrap">
             <button class="scourge-seal" id="scourge-seal" aria-label="Hold to break the bindings" aria-describedby="seal-instruction">
-              <span class="seal-ring ring-one"></span><span class="seal-ring ring-two"></span><span class="seal-ring ring-three"></span>
-              <span class="seal-glyph">✦</span><span class="seal-progress"></span>
+              <svg class="sovereign-sigil-svg" viewBox="0 0 120 164" aria-hidden="true">
+                <ellipse class="sigil-outer" cx="60" cy="82" rx="47" ry="72"/>
+                <ellipse class="sigil-inner" cx="60" cy="82" rx="39" ry="63"/>
+                <ellipse class="sigil-dash" cx="60" cy="82" rx="53" ry="78"/>
+                <path class="sigil-star" d="M60 35 L70 69 L104 69 L77 89 L87 123 L60 102 L33 123 L43 89 L16 69 L50 69 Z"/>
+                <path class="sigil-pentagram" d="M60 35 L87 116 L21 66 L99 66 L33 116 Z"/>
+                <circle class="sigil-core" cx="60" cy="82" r="4"/>
+                <g class="sigil-rivets">
+                  <circle cx="60" cy="13" r="2"/><circle cx="60" cy="151" r="2"/>
+                  <circle cx="13" cy="82" r="2"/><circle cx="107" cy="82" r="2"/>
+                  <circle cx="27" cy="29" r="1.7"/><circle cx="93" cy="29" r="1.7"/>
+                  <circle cx="27" cy="135" r="1.7"/><circle cx="93" cy="135" r="1.7"/>
+                </g>
+              </svg>
+              <span class="seal-progress"></span>
             </button>
             <p id="seal-instruction" class="seal-instruction">HOLD TO BREAK</p>
           </div>
