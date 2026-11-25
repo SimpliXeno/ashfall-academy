@@ -379,17 +379,18 @@
 }
 .binding-chain{
  position:absolute!important;left:50%!important;top:50%!important;
- width:178%!important;height:46px!important;margin:-23px 0 0 -89%!important;
- border:0!important;border-radius:0!important;background:transparent url("../assets/sovereign-chain.svg") center/100% 100% no-repeat!important;
+ width:178%!important;height:58px!important;margin:-29px 0 0 -89%!important;
+ border:0!important;border-radius:0!important;background-position:center!important;
+ background-size:100% 100%!important;background-repeat:no-repeat!important;
  filter:drop-shadow(0 2px 2px rgba(0,0,0,.95)) drop-shadow(0 0 4px rgba(219,181,106,.3))!important
 }
-.chain-diagonal-one{transform:rotate(56deg)!important}
-.chain-diagonal-two{transform:rotate(-56deg)!important}
+.chain-diagonal-one{background-image:url("../assets/eshrael-chain-flat.svg")!important;transform:rotate(56deg)!important}
+.chain-diagonal-two{background-image:url("../assets/eshrael-chain-vertical.svg")!important;transform:rotate(-56deg)!important}
 .scourge-seal-wrap{z-index:9!important}
 .scourge-seal{z-index:9!important}
 .scourge-section.bindings-broken .chain-diagonal-one{animation:sovereignChainSnapA .64s ease-in forwards}
 .scourge-section.bindings-broken .chain-diagonal-two{animation:sovereignChainSnapB .64s ease-in forwards}
 @media(max-width:760px){
- .binding-chain{height:34px!important;margin-top:-17px!important}
+ .binding-chain{height:42px!important;margin-top:-21px!important}
  .sealed-figure-img{width:138%!important;height:100%!important;top:0!important}
 }
