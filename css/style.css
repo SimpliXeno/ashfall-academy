@@ -217,14 +217,9 @@
 .scourge-card-copy p{font:9px var(--serif);letter-spacing:.1em;color:#c6bdad;margin:0}
 .scourge-card-copy p span{color:var(--red);padding:0 5px}
 .card-bindings{position:absolute;z-index:5;inset:0;overflow:visible;pointer-events:none;transition:opacity .3s ease}
-.binding-chain{
-  position:absolute;display:block;left:50%;top:50%;width:146%;height:18px;margin:-9px 0 0 -73%;
-  transform-origin:center;border:0;border-radius:0;
-  background:radial-gradient(ellipse 5px 8px at 8px 9px,transparent 54%,#f1d58e 59% 70%,#765222 77%,transparent 84%) 0 0/16px 18px repeat-x,
-  linear-gradient(180deg,#f4d994 0%,#9b6b2d 28%,#e4c17a 52%,#70491e 76%,#c69a50 100%);
-  filter:drop-shadow(0 1px 3px #080706) drop-shadow(0 0 4px rgba(218,177,96,.42))
-}
-.chain-diagonal-one{transform:rotate(56deg)}.chain-diagonal-two{transform:rotate(-56deg)}
+.binding-chain{position:absolute;display:block;left:50%;top:50%;width:146%;height:58px;margin:-29px 0 0 -73%;background-position:center;background-repeat:no-repeat;background-size:100% 100%;filter:drop-shadow(0 1px 3px #080706) drop-shadow(0 0 4px rgba(218,177,96,.42))}
+.chain-diagonal-one{background-image:url("../assets/eshrael-chain-flat.svg");transform:rotate(56deg)}
+.chain-diagonal-two{background-image:url("../assets/eshrael-chain-vertical.svg");transform:rotate(-56deg)}
 .scourge-seal-wrap{position:absolute;z-index:8;left:50%;top:50%;transform:translate(-50%,-50%);width:220px;height:220px;margin:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
 .scourge-seal{
   --hold-progress:0;pointer-events:auto;position:relative;width:clamp(104px,11vw,132px);height:clamp(138px,15vw,168px);
