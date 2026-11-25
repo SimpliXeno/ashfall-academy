@@ -1,73 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="100" viewBox="0 0 1000 100">
- <defs>
-  <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
-   <stop stop-color="#fff4d4"/><stop offset=".14" stop-color="#e5c47e"/><stop offset=".32" stop-color="#a97835"/><stop offset=".52" stop-color="#f5dda0"/><stop offset=".72" stop-color="#9a6a2d"/><stop offset=".9" stop-color="#d8b16d"/><stop offset="1" stop-color="#fff0c4"/>
-  </linearGradient>
-  <linearGradient id="rod" x1="0" y1="0" x2="0" y2="1">
-   <stop stop-color="#fff1c9"/><stop offset=".2" stop-color="#d7b36c"/><stop offset=".48" stop-color="#8c602a"/><stop offset=".7" stop-color="#f1d28f"/><stop offset="1" stop-color="#6d491f"/>
-  </linearGradient>
-  <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1">
-   <stop stop-color="#35230f"/><stop offset=".5" stop-color="#100c07"/><stop offset="1" stop-color="#4b351b"/>
-  </linearGradient>
- </defs>
- <g filter="drop-shadow(0 3px 2px #080604)"><g transform="translate(38 50)">
-    <path d="M-49 0 H49" stroke="url(#dark)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M-49 0 H49" stroke="url(#rod)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M-43 -2 H42" stroke="#fff1c9" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
-    <path d="M-44 4 H43" stroke="#77501f" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
-   </g><g transform="translate(130 50)">
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#dark)" stroke-width="17"/>
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#metal)" stroke-width="11"/>
-    <path d="M-33 -13 Q-18 -24 2 -23" fill="none" stroke="#fff4d6" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M9 22 Q31 19 39 5" fill="none" stroke="#805726" stroke-width="1.7" stroke-linecap="round"/>
-   </g><g transform="translate(222 50)">
-    <path d="M-49 0 H49" stroke="url(#dark)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M-49 0 H49" stroke="url(#rod)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M-43 -2 H42" stroke="#fff1c9" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
-    <path d="M-44 4 H43" stroke="#77501f" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
-   </g><g transform="translate(314 50)">
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#dark)" stroke-width="17"/>
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#metal)" stroke-width="11"/>
-    <path d="M-33 -13 Q-18 -24 2 -23" fill="none" stroke="#fff4d6" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M9 22 Q31 19 39 5" fill="none" stroke="#805726" stroke-width="1.7" stroke-linecap="round"/>
-   </g><g transform="translate(406 50)">
-    <path d="M-49 0 H49" stroke="url(#dark)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M-49 0 H49" stroke="url(#rod)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M-43 -2 H42" stroke="#fff1c9" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
-    <path d="M-44 4 H43" stroke="#77501f" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
-   </g><g transform="translate(498 50)">
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#dark)" stroke-width="17"/>
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#metal)" stroke-width="11"/>
-    <path d="M-33 -13 Q-18 -24 2 -23" fill="none" stroke="#fff4d6" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M9 22 Q31 19 39 5" fill="none" stroke="#805726" stroke-width="1.7" stroke-linecap="round"/>
-   </g><g transform="translate(590 50)">
-    <path d="M-49 0 H49" stroke="url(#dark)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M-49 0 H49" stroke="url(#rod)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M-43 -2 H42" stroke="#fff1c9" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
-    <path d="M-44 4 H43" stroke="#77501f" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
-   </g><g transform="translate(682 50)">
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#dark)" stroke-width="17"/>
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#metal)" stroke-width="11"/>
-    <path d="M-33 -13 Q-18 -24 2 -23" fill="none" stroke="#fff4d6" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M9 22 Q31 19 39 5" fill="none" stroke="#805726" stroke-width="1.7" stroke-linecap="round"/>
-   </g><g transform="translate(774 50)">
-    <path d="M-49 0 H49" stroke="url(#dark)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M-49 0 H49" stroke="url(#rod)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M-43 -2 H42" stroke="#fff1c9" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
-    <path d="M-44 4 H43" stroke="#77501f" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
-   </g><g transform="translate(866 50)">
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#dark)" stroke-width="17"/>
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#metal)" stroke-width="11"/>
-    <path d="M-33 -13 Q-18 -24 2 -23" fill="none" stroke="#fff4d6" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M9 22 Q31 19 39 5" fill="none" stroke="#805726" stroke-width="1.7" stroke-linecap="round"/>
-   </g><g transform="translate(958 50)">
-    <path d="M-49 0 H49" stroke="url(#dark)" stroke-width="18" stroke-linecap="round"/>
-    <path d="M-49 0 H49" stroke="url(#rod)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M-43 -2 H42" stroke="#fff1c9" stroke-width="2.1" stroke-linecap="round" opacity=".9"/>
-    <path d="M-44 4 H43" stroke="#77501f" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
-   </g><g transform="translate(1050 50)">
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#dark)" stroke-width="17"/>
-    <ellipse rx="43" ry="23" fill="none" stroke="url(#metal)" stroke-width="11"/>
-    <path d="M-33 -13 Q-18 -24 2 -23" fill="none" stroke="#fff4d6" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M9 22 Q31 19 39 5" fill="none" stroke="#805726" stroke-width="1.7" stroke-linecap="round"/>
-   </g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="84" viewBox="0 0 1000 84">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff4d4"/><stop offset=".14" stop-color="#e5c47e"/><stop offset=".32" stop-color="#a97835"/><stop offset=".52" stop-color="#f5dda0"/><stop offset=".72" stop-color="#9a6a2d"/><stop offset=".9" stop-color="#d8b16d"/><stop offset="1" stop-color="#fff0c4"/></linearGradient>
+    <linearGradient id="rod" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff4d4"/><stop offset=".16" stop-color="#e5c47e"/><stop offset=".36" stop-color="#a97835"/><stop offset=".56" stop-color="#f5dda0"/><stop offset=".78" stop-color="#9a6a2d"/><stop offset="1" stop-color="#fff0c4"/></linearGradient>
+    <linearGradient id="dark" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#35230f"/><stop offset=".5" stop-color="#100c07"/><stop offset="1" stop-color="#4b351b"/></linearGradient>
+  </defs>
+  <g filter="drop-shadow(0 3px 2px #080604)"><g transform="translate(4 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(82 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g><g transform="translate(160 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(238 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g><g transform="translate(316 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(394 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g><g transform="translate(472 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(550 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g><g transform="translate(628 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(706 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g><g transform="translate(784 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(862 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g><g transform="translate(940 42)"><g>
+    <path d="M-41 0 H41" stroke="url(#dark)" stroke-width="21" stroke-linecap="round"/>
+    <path d="M-41 0 H41" stroke="url(#rod)" stroke-width="14" stroke-linecap="round"/>
+    <path d="M-35 -2 H35" stroke="#fff1c9" stroke-width="2.5" stroke-linecap="round" opacity=".95"/>
+    <path d="M-36 5 H36" stroke="#77501f" stroke-width="1.7" stroke-linecap="round" opacity=".85"/>
+  </g></g><g transform="translate(1018 42)"><g>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#dark)" stroke-width="14"/>
+    <ellipse rx="35" ry="19" fill="none" stroke="url(#metal)" stroke-width="9"/>
+    <path d="M-27 -11 Q-15 -20 2 -19" fill="none" stroke="#fff4d6" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 18 Q26 16 32 4" fill="none" stroke="#805726" stroke-width="1.5" stroke-linecap="round"/>
+  </g></g></g>
+</svg>
