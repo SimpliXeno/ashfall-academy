@@ -154,7 +154,14 @@
       record.classList.add("is-released");
       window.setTimeout(()=>{
         record.classList.add("is-revealed");
-        window.setTimeout(()=>{if(scourgeTrigger)scourgeTrigger.disabled=false;},1150);
+        window.setTimeout(()=>{
+          if(scourgeTrigger)scourgeTrigger.disabled=false;
+          const unveiledRecord=$("#scourge-revealed-record");
+          if(unveiledRecord){
+            unveiledRecord.hidden=false;
+            judgement.classList.add("record-unveiled");
+          }
+        },1150);
       },450);
       instruction.textContent=" ";
       $("#scourge-quote").textContent="A name once buried beneath the weight of Heaven.";
