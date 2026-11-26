@@ -421,3 +421,14 @@
 .character-grid .tarot-card:focus-visible{outline:1px solid var(--tarot-corner);outline-offset:2px;border-radius:6px}
 @media(max-width:700px){.tarot-nameplate h3{font-size:11px}.tarot-nameplate{padding:18px 10px 15px}}
 @media(prefers-reduced-motion:reduce){.character-grid .tarot-card,.character-grid .tarot-frame,.character-grid .tarot-card .portrait img{transition:none!important;transform:none!important}}
+
+
+/* The Church's Ward — distinct from the old pentagram. */
+.sovereign-sigil-svg .sigil-judgment{stroke:#fff0cc;stroke-width:1.65;filter:drop-shadow(0 0 3px rgba(255,229,166,.45))}
+.sovereign-sigil-svg .sigil-halo-mark{stroke:#e7d6ac;stroke-width:1.35}
+.sovereign-sigil-svg .sigil-wing-mark{stroke:#e2d5b7;stroke-width:1.2;opacity:.92}
+.sovereign-sigil-svg .sigil-wing-detail{stroke:#e2d5b7;stroke-width:.7;opacity:.62}
+.sovereign-sigil-svg .sigil-diamond{stroke:#fff1cc;stroke-width:1.15;fill:rgba(255,230,164,.13)}
+.sovereign-sigil-svg .sigil-anchors{stroke:#f0d5a1;stroke-width:1;fill:rgba(229,195,132,.12)}
+.sovereign-sigil-svg .sigil-ward-glyphs{stroke:#e2d2af;stroke-width:.85;opacity:.7}
+.scourge-seal.is-holding .sigil-ward{filter:drop-shadow(0 0 4px rgba(255,233,177,.7))}
