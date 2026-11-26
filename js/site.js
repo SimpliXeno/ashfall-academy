@@ -148,24 +148,21 @@
     judgement.classList.add("bindings-broken","radiance-burst","flash-release");
     playSealBreak();
     seal.disabled=true;
+    const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Swap the entire record during the bright plateau, before the flash recedes.
     window.setTimeout(()=>{
       seal.classList.add("seal-fading");
       record.classList.remove("is-bound");
-      record.classList.add("is-released");
-      window.setTimeout(()=>{
-        record.classList.add("is-revealed");
-        window.setTimeout(()=>{
-          if(scourgeTrigger)scourgeTrigger.disabled=false;
-          const unveiledRecord=$("#scourge-revealed-record");
-          if(unveiledRecord){
-            unveiledRecord.hidden=false;
-            judgement.classList.add("record-unveiled");
-          }
-        },1150);
-      },450);
+      record.classList.add("is-released","is-revealed");
       instruction.textContent=" ";
       $("#scourge-quote").textContent="Even in chains, the Scourge remains a name the world fears.";
-    },650);
+      const unveiledRecord=$("#scourge-revealed-record");
+      if(unveiledRecord){
+        unveiledRecord.hidden=false;
+        judgement.classList.add("record-unveiled");
+      }
+      window.setTimeout(()=>{if(scourgeTrigger)scourgeTrigger.disabled=false;},reduceMotion?0:1150);
+    },reduceMotion?0:250);
   }
   seal.addEventListener("pointerdown",startHold);
   seal.addEventListener("pointerup",cancelHold);
