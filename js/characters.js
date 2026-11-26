@@ -64,6 +64,8 @@ window.ASHFALL_DATA = {
     },
     {
       "name": "Enkai Esteris",
+      "image": "assets/enkai-esteris.webp",
+      "tarotImage": "assets/enkai-esteris.webp",
       "year": 2,
       "age": 19,
       "role": "Second-year · Unruly swordsman",
