@@ -6,14 +6,29 @@
   const brText = c => typeof c.br === "number" ? `BR ${c.br}` : (c.br ?? "Unknown");
   const potentialText = c => typeof c.potential === "number" ? `P ${c.potential}` : (c.potential ?? "Unknown");
   function card(c, group) {
-    const image = c.image ? `<img src="${esc(c.image)}" alt="" loading="lazy">` : '<span class="sigil" aria-hidden="true">✧</span>';
+    const src = c.tarotImage || c.image;
+    const image = src ? `<img src="${esc(src)}" alt="" loading="lazy" class="roster-art${c.tarotImage ? " baked-tarot-art" : ""}">` : "";
     return `<article class="character-card tarot-card" tabindex="0" role="button" data-group="${group}" data-name="${esc(c.name)}" aria-label="Open dossier for ${esc(c.name)}">
       <div class="tarot-frame">
-        <div class="portrait">${image}</div>
+        <div class="portrait"><span class="sigil" aria-hidden="true">✧</span>${image}</div>
         <div class="tarot-nameplate"><h3>${esc(c.name)}</h3></div>
         <div class="tarot-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
       </div></article>`;
   }
+  document.addEventListener("load",e=>{
+    const img=e.target;
+    if(img instanceof HTMLImageElement && img.classList.contains("roster-art")){
+      const card=img.closest(".tarot-card");
+      if(card){card.classList.add("art-loaded");if(img.classList.contains("baked-tarot-art"))card.classList.add("artwork-framed");}
+    }
+  },true);
+  document.addEventListener("error",e=>{
+    const img=e.target;
+    if(img instanceof HTMLImageElement && img.classList.contains("roster-art"))img.hidden=true;
+    if(img instanceof HTMLImageElement && img.closest("#dialog-image")){
+      const holder=img.closest("#dialog-image");holder.textContent="PORTRAIT PLACEHOLDER";
+    }
+  },true);
   const studentGrid = $("#student-grid");
   function renderStudents(year="all") {
     const list = data.students.filter(c => year === "all" || String(c.year) === year);
