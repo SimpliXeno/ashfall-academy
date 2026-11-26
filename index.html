@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Crimson+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261126-15">
+  <link rel="stylesheet" href="css/style.css?v=20261126-16">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -171,9 +171,25 @@
           <div class="scourge-seal-wrap">
             <button class="scourge-seal" id="scourge-seal" aria-label="Hold to break the bindings" aria-describedby="seal-instruction">
               <svg class="sovereign-sigil-svg" viewBox="0 0 160 160" aria-hidden="true">
-                <circle class="sigil-outer" cx="80" cy="80" r="68"/>
-                <circle class="sigil-inner" cx="80" cy="80" r="59"/>
-                <circle class="sigil-dash" cx="80" cy="80" r="74"/>
+                <g class="sigil-orbit orbit-dash">
+                  <circle class="sigil-dash" cx="80" cy="80" r="74"/>
+                  <circle class="sigil-orbit-ticks" cx="80" cy="80" r="74"/>
+                </g>
+                <g class="sigil-orbit orbit-outer">
+                  <circle class="sigil-outer" cx="80" cy="80" r="68"/>
+                  <g class="sigil-rivets">
+                  <circle cx="80" cy="12" r="2"/><circle cx="80" cy="148" r="2"/>
+                  <circle cx="12" cy="80" r="2"/><circle cx="148" cy="80" r="2"/>
+                  <circle cx="32" cy="32" r="1.7"/><circle cx="128" cy="32" r="1.7"/>
+                  <circle cx="32" cy="128" r="1.7"/><circle cx="128" cy="128" r="1.7"/>
+                </g>
+                </g>
+                <g class="sigil-orbit orbit-inner">
+                  <circle class="sigil-inner" cx="80" cy="80" r="59"/>
+                  <g class="sigil-anchors">
+                  <path d="M42 18 L48 24 L42 30 L36 24 Z M118 18 L124 24 L118 30 L112 24 Z M42 130 L48 136 L42 142 L36 136 Z M118 130 L124 136 L118 142 L112 136 Z"/>
+                </g>
+                </g>
                 <!-- The Church's ward: a sword of judgment, broken halo, and bound wings. -->
                 <g class="sigil-ward" fill="none">
                   <path class="sigil-halo-mark" d="M56 47 A26 26 0 0 1 76 34 M84 34 A26 26 0 0 1 104 47 M56 51 A26 26 0 0 0 64 68 M104 51 A26 26 0 0 1 96 68"/>
@@ -182,19 +198,9 @@
                   <path class="sigil-judgment" d="M80 41 L75 46 L80 51 L85 46 Z M80 51 V65 M68 66 L80 71 L92 66 M75 72 L75 98 L80 126 L85 98 L85 72 M80 76 V115"/>
                   <path class="sigil-diamond" d="M80 73 L87 80 L80 87 L73 80 Z"/>
                 </g>
-                <g class="sigil-anchors">
-                  <path d="M42 18 L48 24 L42 30 L36 24 Z M118 18 L124 24 L118 30 L112 24 Z M42 130 L48 136 L42 142 L36 136 Z M118 130 L124 136 L118 142 L112 136 Z"/>
-                </g>
-                <g class="sigil-ward-glyphs">
-                  <path d="M76 19 L80 23 L84 19 M76 141 L80 137 L84 141 M19 76 L23 80 L19 84 M141 76 L137 80 L141 84"/>
-                  <path d="M29 55 L34 57 L30 61 M131 55 L126 57 L130 61 M29 105 L34 103 L30 99 M131 105 L126 103 L130 99"/>
-                </g>
-                <g class="sigil-rivets">
-                  <circle cx="80" cy="12" r="2"/><circle cx="80" cy="148" r="2"/>
-                  <circle cx="12" cy="80" r="2"/><circle cx="148" cy="80" r="2"/>
-                  <circle cx="32" cy="32" r="1.7"/><circle cx="128" cy="32" r="1.7"/>
-                  <circle cx="32" cy="128" r="1.7"/><circle cx="128" cy="128" r="1.7"/>
-                </g>
+                
+                
+                
                 <g class="sigil-cracks">
                   <path class="sigil-crack crack-a" d="M84 77 L97 66 L91 54 L105 43"/>
                   <path class="sigil-crack crack-b" d="M77 83 L64 94 L70 108 L57 120"/>
