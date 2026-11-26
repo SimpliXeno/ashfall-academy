@@ -5,18 +5,19 @@
   const affinityText = c => (c.affinities || ["Unknown"]).join(" / ");
   const brText = c => typeof c.br === "number" ? `BR ${c.br}` : (c.br ?? "Unknown");
   const potentialText = c => typeof c.potential === "number" ? `P ${c.potential}` : (c.potential ?? "Unknown");
-  function card(c, group, yearLabel="") {
-    const label = group === "students" ? `${yearLabel} · Student` : c.role;
-    const image = c.image ? `<img src="${esc(c.image)}" alt="${esc(c.name)} portrait" loading="lazy">` : "";
+  function card(c, group) {
+    const image = c.image ? `<img src="${esc(c.image)}" alt="" loading="lazy">` : '<span class="sigil" aria-hidden="true">✧</span>';
     return `<article class="character-card tarot-card" tabindex="0" role="button" data-group="${group}" data-name="${esc(c.name)}" aria-label="Open dossier for ${esc(c.name)}">
-      <div class="tarot-frame"><div class="portrait">${image}<span class="sigil">✧</span><span class="portrait-caption">${esc(c.name)}</span></div>
-      <div class="card-info"><div class="card-label">${esc(label)}</div><h3>${esc(c.name)}</h3><p>${esc(c.role || "Student")}</p>
-      <div class="card-meta"><span><b>${esc(brText(c))}</b></span><span><b>${esc(potentialText(c))}</b></span></div><div class="card-affinities">${esc(affinityText(c))}</div></div></div></article>`;
+      <div class="tarot-frame">
+        <div class="portrait">${image}</div>
+        <div class="tarot-nameplate"><h3>${esc(c.name)}</h3></div>
+        <div class="tarot-corners" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div></article>`;
   }
   const studentGrid = $("#student-grid");
   function renderStudents(year="all") {
     const list = data.students.filter(c => year === "all" || String(c.year) === year);
-    studentGrid.innerHTML = list.map(c => card(c,"students",["","First Year","Second Year","Third Year"][c.year])).join("");
+    studentGrid.innerHTML = list.map(c => card(c,"students")).join("");
     document.querySelectorAll(".filter-button").forEach(b => b.classList.toggle("active", b.dataset.year === year));
   }
   renderStudents();
