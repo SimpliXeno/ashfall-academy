@@ -474,3 +474,22 @@
 @keyframes scourgeRecordUnveil{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:430px){.scourge-record-fields dt{font-size:8px;letter-spacing:.06em}.scourge-revealed-record{margin-top:23px}}
 @media(prefers-reduced-motion:reduce){.scourge-revealed-record{animation:none}}
+
+
+/* Conceal the archive layout swap inside a single continuous warm flash. */
+.scourge-section{overflow-anchor:none}
+.scourge-flash{background:radial-gradient(ellipse at 50% 48%,#fffdf5 0%,#fff7e5 44%,#e9d4ac 100%);mix-blend-mode:normal;transform:none;filter:none}
+.scourge-section.flash-release .scourge-flash{animation:scourgeRevealVeil 1.45s ease both}
+@keyframes scourgeRevealVeil{
+  0%{opacity:0}
+  12%,36%{opacity:1}
+  58%{opacity:.72}
+  100%{opacity:0}
+}
+.scourge-revealed-record{animation:none}
+.scourge-section.record-unveiled .scourge-content{justify-content:center}
+@media(prefers-reduced-motion:reduce){
+  .scourge-section.flash-release .scourge-flash{animation:none;opacity:0}
+  .scourge-section.radiance-burst::after{animation:none;opacity:0}
+  .scourge-section.radiance-burst .scourge-tarot-stage{animation:none}
+}
