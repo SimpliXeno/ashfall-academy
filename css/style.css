@@ -432,3 +432,13 @@
 .sovereign-sigil-svg .sigil-anchors{stroke:#f0d5a1;stroke-width:1;fill:rgba(229,195,132,.12)}
 .sovereign-sigil-svg .sigil-ward-glyphs{stroke:#e2d2af;stroke-width:.85;opacity:.7}
 .scourge-seal.is-holding .sigil-ward{filter:drop-shadow(0 0 4px rgba(255,233,177,.7))}
+
+
+/* Independent, counter-rotating rings around the stationary judgment ward. */
+.sovereign-sigil-svg .sigil-orbit{transform-box:view-box;transform-origin:50% 50%;animation:sigilOrbit 28s linear infinite}
+.sovereign-sigil-svg .orbit-dash{animation-duration:38s}
+.sovereign-sigil-svg .orbit-outer{animation-duration:29s;animation-direction:reverse}
+.sovereign-sigil-svg .orbit-inner{animation-duration:23s}
+.sovereign-sigil-svg .sigil-orbit-ticks{stroke:rgba(239,220,176,.7);stroke-width:1.15;stroke-dasharray:3 35.746;stroke-linecap:round}
+@keyframes sigilOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.sovereign-sigil-svg .sigil-orbit{animation:none}}
