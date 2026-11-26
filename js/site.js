@@ -164,7 +164,7 @@
         },1150);
       },450);
       instruction.textContent=" ";
-      $("#scourge-quote").textContent="A name once buried beneath the weight of Heaven.";
+      $("#scourge-quote").textContent="Even in chains, the Scourge remains a name the world fears.";
     },650);
   }
   seal.addEventListener("pointerdown",startHold);
