@@ -72,6 +72,11 @@
 
   // Hold-to-break seal: quiet reset on release, radiant release on completion.
   const seal=$("#scourge-seal"), record=$("#scourge-record"), instruction=$("#seal-instruction"), judgement=$("#scourge");
+  const scourgeTrigger=$("#scourge-dossier-trigger");
+  const scourgeCharacter=data.hell.find(c=>c.name==="Eshrael");
+  const scourgeArt=$("#scourge-revealed-art");
+  if(scourgeCharacter?.image && scourgeArt) scourgeArt.innerHTML=`<img src="${esc(scourgeCharacter.image)}" alt="" loading="lazy">`;
+  scourgeTrigger?.addEventListener("click",()=>{if(record.classList.contains("is-revealed"))openDossier("hell","Eshrael");});
   let completed=false, pointerHeld=false, rafId=null;
   const HOLD_MS=3000;
   function updateHold(){
@@ -147,7 +152,10 @@
       seal.classList.add("seal-fading");
       record.classList.remove("is-bound");
       record.classList.add("is-released");
-      window.setTimeout(()=>record.classList.add("is-revealed"),450);
+      window.setTimeout(()=>{
+        record.classList.add("is-revealed");
+        window.setTimeout(()=>{if(scourgeTrigger)scourgeTrigger.disabled=false;},1150);
+      },450);
       instruction.textContent=" ";
       $("#scourge-quote").textContent="A name once buried beneath the weight of Heaven.";
     },650);
