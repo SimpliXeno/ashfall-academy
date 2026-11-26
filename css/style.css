@@ -493,3 +493,23 @@
   .scourge-section.radiance-burst::after{animation:none;opacity:0}
   .scourge-section.radiance-burst .scourge-tarot-stage{animation:none}
 }
+
+
+/* Woven mana network: a finite illustration of an endless, interconnected web. */
+.affinity-web.mana-network{height:auto;width:100%;max-width:680px;aspect-ratio:600/460;margin:10px auto 6px;transform:none}
+.affinity-web.mana-network::before,.affinity-web.mana-network::after{content:none}
+.mana-network svg{display:block;width:100%;height:auto;overflow:visible}
+.mana-mesh path{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.mana-thread{stroke:#b99a60;stroke-width:1;opacity:.48}
+.mana-thread.edge-thread{opacity:.32}
+.mana-spoke{stroke:#d0ad6a;stroke-width:1.05;opacity:.46}
+.mana-cross{stroke:#ab8e59;stroke-width:.65;opacity:.25}
+.mana-junction{fill:#d4b779;opacity:.67}
+.mana-junction.edge-junction{opacity:.3}
+.mana-affinity circle{fill:#d8bb7e;stroke:#f1d5a0;stroke-width:.8;filter:drop-shadow(0 0 4px rgba(218,184,119,.4))}
+.mana-affinity text{text-anchor:middle;fill:#d8c6a4;font:500 14px var(--serif);letter-spacing:.04em;paint-order:stroke;stroke:#1b1b17;stroke-width:4px;stroke-linejoin:round}
+.mana-web-title circle{fill:#1c1c17;stroke:#a58a5b;stroke-width:1;opacity:.96}
+.mana-web-title text{text-anchor:middle;font-family:var(--serif);fill:#bca16f;letter-spacing:.15em}
+.mana-web-title .mana-title-small{font-size:10px}
+.mana-web-title .mana-title-main{font-size:23px;fill:#e4d8c1;letter-spacing:.06em}
+@media(max-width:430px){.affinity-web.mana-network{max-width:100%;margin:12px auto 0;transform:none}.mana-affinity text{font-size:16px}}
