@@ -527,12 +527,3 @@
 .affinity-mesh .mana-web-title circle{fill:#1b1b17;stroke:#a58a5b;stroke-width:.9;opacity:.98}
 .affinity-mesh .mana-title-main{font-size:21px}
 @media(max-width:430px){.affinity-mesh .mana-affinity text{font-size:16px}}
-
-
-/* Refined aspect mesh: quieter supporting strands and clear named junctions. */
-.affinity-mesh .mana-link{stroke-width:.95;opacity:.43}
-.affinity-mesh .mana-link.primary{stroke-width:1.35;opacity:.62}
-.affinity-mesh .mana-link.continuation{opacity:.18;stroke-width:.8}
-.affinity-mesh .mana-junction{opacity:.54}
-.affinity-mesh .mana-affinity circle{r:4.5px;filter:drop-shadow(0 0 3px rgba(218,184,119,.3))}
-.affinity-mesh .mana-affinity text{stroke-width:5px;fill:#e1cfad}
