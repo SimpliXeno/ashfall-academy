@@ -527,3 +527,13 @@
 .affinity-mesh .mana-web-title circle{fill:#1b1b17;stroke:#a58a5b;stroke-width:.9;opacity:.98}
 .affinity-mesh .mana-title-main{font-size:21px}
 @media(max-width:430px){.affinity-mesh .mana-affinity text{font-size:16px}}
+
+
+/* Artwork with its own illustrated tarot border and lettering. */
+.character-grid .tarot-card .roster-art{visibility:hidden}
+.character-grid .tarot-card.art-loaded .roster-art{visibility:visible}
+.character-grid .tarot-card.art-loaded .portrait .sigil{display:none}
+.character-grid .tarot-card.artwork-framed .tarot-frame{border-color:transparent}
+.character-grid .tarot-card.artwork-framed .tarot-frame::before,.character-grid .tarot-card.artwork-framed .tarot-nameplate,.character-grid .tarot-card.artwork-framed .tarot-corners{display:none}
+.character-grid .tarot-card.artwork-framed .portrait img{object-fit:contain;object-position:center}
+.character-grid .tarot-card.artwork-framed:hover .portrait img,.character-grid .tarot-card.artwork-framed:focus-visible .portrait img{transform:none}
