@@ -394,3 +394,30 @@
  .binding-chain{height:42px!important;margin-top:-21px!important}
  .sealed-figure-img{width:138%!important;height:100%!important;top:0!important}
 }
+
+
+/* === Illustrated archive: full-bleed tarot faces === */
+.character-grid .tarot-card{--tarot-edge:#9f8659;--tarot-inner:rgba(201,173,115,.52);--tarot-corner:#c6aa72;--tarot-name:#eddbb4;--tarot-glow:rgba(190,153,86,.28);padding:5px}
+.faculty-grid .tarot-card{--tarot-edge:#b69b6b;--tarot-inner:rgba(230,199,139,.58);--tarot-corner:#e2c68d;--tarot-glow:rgba(209,177,116,.3)}
+.hell-grid .tarot-card{--tarot-edge:#855b4f;--tarot-inner:rgba(186,125,97,.54);--tarot-corner:#bb9274;--tarot-name:#e6cbb1;--tarot-glow:rgba(160,77,54,.32)}
+.character-grid .tarot-frame{position:relative;display:block;isolation:isolate;overflow:hidden;box-sizing:border-box;width:100%;height:auto;aspect-ratio:2/3;padding:0;border:1px solid var(--tarot-edge);border-radius:4px;background:#171714;box-shadow:0 8px 22px rgba(0,0,0,.35);transition:border-color .28s,box-shadow .28s,transform .28s}
+.character-grid .tarot-frame::before{content:"";position:absolute;inset:5px;z-index:3;border:1px solid var(--tarot-inner);border-radius:2px;pointer-events:none}
+.character-grid .tarot-frame::after{content:none}
+.character-grid .tarot-card .portrait{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;width:100%;height:100%;min-height:0;margin:0;border:0;overflow:hidden}
+.character-grid .tarot-card .portrait::before,.character-grid .tarot-card .portrait::after{content:none}
+.character-grid .tarot-card .portrait img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center 35%;transition:transform .5s ease}
+.character-grid .tarot-card .portrait .sigil{font-size:48px;color:var(--tarot-corner);opacity:.27}
+.tarot-nameplate{position:absolute;inset:auto 0 0;z-index:2;display:flex;align-items:flex-end;justify-content:center;min-height:34%;padding:24px 12px 17px;box-sizing:border-box;background:linear-gradient(to bottom,transparent,rgba(10,9,8,.38) 31%,rgba(10,9,8,.9) 76%,#0a0908);pointer-events:none}
+.tarot-nameplate h3{max-width:100%;margin:0;text-align:center;font:500 clamp(10px,1.1vw,12px)/1.25 var(--serif);letter-spacing:.075em;text-transform:uppercase;color:var(--tarot-name);text-shadow:0 2px 5px #000;overflow-wrap:anywhere}
+.tarot-corners{position:absolute;inset:8px;z-index:4;pointer-events:none}
+.tarot-corners i{position:absolute;display:block;width:5px;height:5px;box-sizing:border-box;background:var(--tarot-corner);transform:translate(-50%,-50%) rotate(45deg);box-shadow:0 0 3px rgba(0,0,0,.65)}
+.tarot-corners i:nth-child(1){top:0;left:0}
+.tarot-corners i:nth-child(2){top:0;left:100%}
+.tarot-corners i:nth-child(3){top:100%;left:0}
+.tarot-corners i:nth-child(4){top:100%;left:100%}
+.character-grid .tarot-card:hover,.character-grid .tarot-card:focus-visible{transform:translateY(-4px)}
+.character-grid .tarot-card:hover .tarot-frame,.character-grid .tarot-card:focus-visible .tarot-frame{transform:none;border-color:var(--tarot-corner);box-shadow:0 12px 27px rgba(0,0,0,.48),0 0 18px var(--tarot-glow)}
+.character-grid .tarot-card:hover .portrait img,.character-grid .tarot-card:focus-visible .portrait img{transform:scale(1.045)}
+.character-grid .tarot-card:focus-visible{outline:1px solid var(--tarot-corner);outline-offset:2px;border-radius:6px}
+@media(max-width:700px){.tarot-nameplate h3{font-size:11px}.tarot-nameplate{padding:18px 10px 15px}}
+@media(prefers-reduced-motion:reduce){.character-grid .tarot-card,.character-grid .tarot-frame,.character-grid .tarot-card .portrait img{transition:none!important;transform:none!important}}
