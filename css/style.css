@@ -479,7 +479,7 @@
 /* Conceal the archive layout swap inside a single continuous warm flash. */
 .scourge-section{overflow-anchor:none}
 .scourge-flash{background:radial-gradient(ellipse at 50% 48%,#fffdf5 0%,#fff7e5 44%,#e9d4ac 100%);mix-blend-mode:normal;transform:none;filter:none}
-.scourge-section.flash-release .scourge-flash{animation:scourgeRevealVeil 1.45s ease both}
+.scourge-section.flash-release .scourge-flash{animation:scourgeRevealVeil 1s ease both}
 @keyframes scourgeRevealVeil{
   0%{opacity:0}
   12%,36%{opacity:1}
