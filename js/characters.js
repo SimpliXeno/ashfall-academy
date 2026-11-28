@@ -158,6 +158,8 @@ window.ASHFALL_DATA = {
     },
     {
       "name": "Kaela Aurelith",
+      "image": "assets/kaela-aurelith.webp",
+      "tarotImage": "assets/kaela-aurelith.webp",
       "year": 3,
       "age": 20,
       "role": "Third-year · Aurelith heir",
