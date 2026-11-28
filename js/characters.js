@@ -2,6 +2,8 @@ window.ASHFALL_DATA = {
   "students": [
     {
       "name": "Celestine Solmire",
+      "image": "assets/celestine-solmire.webp",
+      "tarotImage": "assets/celestine-solmire.webp",
       "year": 1,
       "age": 19,
       "role": "First-year · Solmire heir",
@@ -126,6 +128,8 @@ window.ASHFALL_DATA = {
     },
     {
       "name": "Alaric Veyr",
+      "image": "assets/alaric-veyr.webp",
+      "tarotImage": "assets/alaric-veyr.webp",
       "year": 3,
       "age": 21,
       "role": "Third-year · Student veteran",
