@@ -373,6 +373,8 @@ window.ASHFALL_DATA = {
     },
     {
       "name": "Veyra",
+      "image": "assets/veyra.webp",
+      "tarotImage": "assets/veyra.webp",
       "role": "Hellknight",
       "age": "Apparent 26",
       "appearance": "Flowing ash hair, crimson siren eyes; deep-tan, curvy build. Revealing robes.",
