@@ -97,6 +97,8 @@ window.ASHFALL_DATA = {
     },
     {
       "name": "Mireya Dravenholt",
+      "image": "assets/mireya-dravenholt.webp",
+      "tarotImage": "assets/mireya-dravenholt.webp",
       "year": 2,
       "age": 20,
       "role": "Second-year · Dravenholt heir",
